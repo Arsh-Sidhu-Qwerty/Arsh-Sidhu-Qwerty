@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. (Dr.) Shefali Verma | The Architect of Academic Transformation</title>
+    <title>Prof. (Dr.) Shefali Verma | Global GM of Implementation, Camu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
     <style>body { font-family: 'Inter', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }</style>
@@ -11,7 +11,7 @@
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased">
 
     <div class="fixed top-6 right-6 z-50">
-        <button id="theme-toggle" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 px-4 py-2 rounded-xl shadow-lg text-xs font-bold uppercase tracking-widest">
+        <button id="theme-toggle" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 px-4 py-2 rounded-xl shadow-lg text-xs font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400">
             <span id="theme-toggle-icon">🌙</span> Toggle Theme
         </button>
     </div>
@@ -49,6 +49,16 @@
             </div>
         </section>
 
+        <section class="bg-slate-900 text-white p-10 rounded-3xl text-center shadow-xl">
+            <h2 class="text-2xl font-bold mb-6">Connect Internationally</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <a href="https://www.linkedin.com/in/prof-dr-shefali-verma-744b98167" target="_blank" class="bg-teal-600 hover:bg-teal-700 py-3 rounded-xl font-bold transition">LinkedIn</a>
+                <a href="https://www.facebook.com/share/1cAAsTBYY7/" target="_blank" class="bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-bold transition">Facebook</a>
+                <a href="https://www.instagram.com/shefali_verma_star/" target="_blank" class="bg-pink-600 hover:bg-pink-700 py-3 rounded-xl font-bold transition">Instagram</a>
+                <a href="mailto:shefaliphysics@gmail.com" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold transition">Email Me</a>
+            </div>
+        </section>
+
         <section class="bg-slate-900 text-white p-10 rounded-3xl text-center border border-teal-500">
             <h3 class="text-2xl font-black mb-4 uppercase tracking-widest text-teal-400">Built by Arsh Sidhu</h3>
             <p class="text-slate-400 text-lg mb-6">Arsh Master (@Arshmaster911) is the exclusive software architect behind this professional portal. Engineering elite digital experiences with precision and power.</p>
@@ -64,8 +74,10 @@
 
     <script>
         const toggle = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-toggle-icon');
         toggle.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
+            icon.innerText = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
         });
     </script>
 </body>
